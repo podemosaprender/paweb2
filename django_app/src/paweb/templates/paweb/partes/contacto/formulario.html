@@ -1,0 +1,33 @@
+{% extends base_template  %}
+{% load static %}
+{% load bulma_tags %}
+
+{% block content %}
+	<div class="section contact" id="contacto">
+		<div class="container is-max-desktop has-background-grey-lighter px-4 py-4">
+			<h1 class="title has-text-centered section-title">
+				Inscribite 
+			</h1>
+			<div id="form_contacto" class="is-multiline">
+				<form hx-post="/contacto" hx-target="#form_contacto" method="POST">
+					{% csrf_token %}
+					{{ form|bulma }}
+					<div class="has-text-centered my-1">
+						This site is protected by reCAPTCHA and the Google
+						<a href="https://policies.google.com/privacy">Privacy Policy</a> and
+						<a href="https://policies.google.com/terms">Terms of Service</a> apply.
+					</div>
+					<div class="field">
+						<div class="control ">
+							<button class="button is-fullwidth button-dark">
+								Enviar&nbsp;&nbsp;
+								<i class="fas fa-paper-plane"></i>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+

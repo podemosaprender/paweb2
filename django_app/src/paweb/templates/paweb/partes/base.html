@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Podemos Aprender</title>
+		{% block meta %}{% endblock %}
+
+		<link rel="shortcut icon" href="{% static 'images/favico.png' %}" type="image/x-icon">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+		<link rel="stylesheet" href="{% static 'css/bulma/podemosaprender.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/podemosaprender.css' %}">
+		<script
+				src="https://kit.fontawesome.com/2828f7885a.js"
+				integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
+				crossorigin="anonymous"></script>
+		<script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
+
+		{% block extra_css %}{% endblock extra_css %}
+	</head>
+	<body>
+		<button id="toTop" 
+						title="Go to top"
+						x-data="{ocultar: true}"
+						@click="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"
+						@scroll.window="ocultar= (document.body.scrollTop < 200 && document.documentElement.scrollTop < 200);"
+						:class="{ 'is-hidden': ocultar }"
+						>
+						<i class="fas fa-angle-up"></i>
+		</button>
+
+		<section class="hero is-fullheight-with-navbar is-dark {% block tema %}tema1{% endblock %}_bg">
+			<div class="hero-head">
+				{% include 'paweb/partes/navbar.html' %}
+			</div>
+			{% block hero %}{% endblock %}
+		</section>
+
+		{% block antes_de_content %}{% endblock %}
+		<main role="main" class="main-content">
+			{% block content %}{% endblock %}
+		</main>
+
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<p>
+				<span>All rights reserved. &copy;
+					<a href="https://www.podemosaprender.org">PodemosAprender</a> |
+					<a href="{% static 'tos.html' %}">Terms of Service</a> |
+					<a href="{% static 'privacy.html' %}">Privacy Policy</a> |
+					<a href="{% static 'contact.html' %}">Contact Us</a>
+				</span>
+				</p>
+			</div>
+		</footer>
+
+		<script src="https://unpkg.com/htmx.org@1.8.0" integrity="sha384-cZuAZ+ZbwkNRnrKi05G/fjBX+azI9DNOkNYysZ0I/X5ZFgsmMiBXgDZof30F5ofc" crossorigin="anonymous"></script>
+		{% block extra_js %}{% endblock extra_js %}
+	</body>
+</html>

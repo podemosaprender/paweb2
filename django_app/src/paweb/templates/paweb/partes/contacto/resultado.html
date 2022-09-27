@@ -1,0 +1,20 @@
+{# avisa envio ok, y boton para nuevo form de contacto embebido #}
+<div class="section-light contact" id="contacto">
+	<div class="container">
+		<div
+				id="form_contacto"
+				class="columns is-multiline"
+				data-aos="fade-in-up"
+				data-aos-easing="linear"
+				>
+				<div class="has-text-centered">
+					<h1>Tu mensaje ha sido enviado</h1>
+					<p><button hx-get="/contacto" hx-target="#contacto" hx-swap="outerHTML" hx-trigger="click" class="button is-primary is-outlined ">
+						<span class="icon"> <i class="fa fa-book"></i> </span> 
+						<span>Enviar otro mensaje</span>
+					</button></p>
+				</div>
+		</div>
+	</div>
+</div>
+

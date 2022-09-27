@@ -1,0 +1,33 @@
+{% extends 'paweb/partes/base.html' %}
+{% load static %}
+
+{% block tema %}{{actividad.estilo}}{% endblock %}
+
+
+{% block hero %}
+	<div class="hero-body">
+		<div class="container has-text-centered">
+			<div class="column is-6 is-offset-3">
+				<h1 class="title">
+					Seminario: {{actividad.titulo}}
+				</h1>
+				<h2 class="subtitle">
+					Fecha: Sábado 3 de septiembre 2022 <br/>Duración: 2 horas
+				</h2>
+				<div class="block">
+					{{ actividad.texto }}	
+				</div>
+				<a class="button is-primary is-outlined" href="#contacto">
+					<span class="icon"> <i class="fa fa-book"></i></span>
+					<span>Inscripción/preguntas</span>
+				</a>
+
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+	<a name="contacto"/>
+	{% include 'paweb/partes/contacto/inicial.html' %}
+{% endblock %}

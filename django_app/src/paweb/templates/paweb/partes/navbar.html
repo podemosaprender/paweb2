@@ -1,0 +1,44 @@
+{% load static %}
+<nav 
+	x-data="{ transparentBar: true, isOpen: false }"
+	class="navbar is-dark"
+	>
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="/">
+				<div>PodemosAprender</div> 
+			</a>
+			<div class="navbar-burger burger"
+					 @click="isOpen= !isOpen"
+					 >
+					 <span aria-hidden="true" /> <span aria-hidden="true" /> <span aria-hidden="true" />
+			</div>
+		</div>
+
+		<div id="navbarMenu" class="navbar-menu"
+												 :class="{'is-active': isOpen}"
+												 >
+												 <div class="navbar-end">
+													 <span class="navbar-item">
+														 <a class="button is-outlined is-white" href="/#">
+															 <span class="icon"> <i class="fas fa-home"></i> </span>
+															 <span>Inicio</span>
+														 </a>
+													 </span>
+													 <span class="navbar-item">
+														 <a class="button is-outlined is-white" href="/#actividades">
+															 <span class="icon"> <i class="fa-brands fa-superpowers"></i> </span>
+															 <span>Actividades</span>
+														 </a>
+													 </span>
+													 <span class="navbar-item">
+														 <a class="button is-outlined is-white" href="/#contacto">
+															 <span class="icon"> <i class="fa fa-book"></i> </span>
+															 <span>Participar</span>
+														 </a>
+													 </span>
+												 </div>
+		</div>
+	</div>
+</nav>
+

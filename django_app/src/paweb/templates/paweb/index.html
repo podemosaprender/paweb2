@@ -1,0 +1,72 @@
+{% extends 'paweb/partes/base.html' %}
+{% load static %}
+
+{% block hero %}
+	<div class="hero-body">
+		<div class="container is-max-desktop has-text-centered">
+			<h1 class="title is-1">
+				Podemos<span style="font-size: 1px"> </span>Aprender
+			</h1>
+			<h2 class="subtitle is-4">
+				Avanzá tu proyecto y tu carrera.<br /> 
+				En la práctica.<br /> 
+				Con la ayuda de compañeros,<br />
+				expertos, potenciales clientes y socios.
+		</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+	<div class="section services" id="actividades">
+		<div class="container">
+				<h1 class="title has-text-centered section-title">Seminarios</h1>
+				<h2 class="subtitle has-text-centered">
+					En sólo 2hs te vas pudiendo hacer una cosa que sirve, 
+					con un panorama completo, aunque empieces de cero.	
+				</h2>
+
+				<div class="columns">
+					{% for seminario in seminarios %}
+						<div class="card column">
+							<div class="card-image">
+								<a href="{% url 'actividad' pk=seminario.pk %}">
+									<div class="{{ seminario.estilo }}_bg px-1" style="height: 15em; border-radius: 5px;">
+										<div class="content has-text-white">
+											<div style="height: 2em; ">
+											{{ seminario.hashtags }}
+											</div>
+											<h1 class="is-size-3 has-text-white">{{ seminario.titulo }}</h1>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="section has-background-gray-lighter" id="practicas">
+
+		<h1 class="title has-text-centered section-title">Prácticas profesionales</h1>
+
+		<h2 class="subtitle has-text-centered">
+			Desarrollá y mostrá la experiencia que querés. Llevate un prototipo o producto para mostrar, usando las mejores prácticas.
+		</h2>
+
+	</div>
+
+	<div class="section services" id="grupos">
+		<div
+				class="column about-me mt-3" >
+				<h1 class="title has-text-centered section-title">Grupos de Estudio</h1>
+				<h2 class="subtitle has-text-centered">
+					Se aprende mejor en equipo. Nos reunimos a investigar, probar, y publicar sobre un tema o herramienta.
+				</h2>
+		</div>
+	</div>
+
+	{% include 'paweb/partes/contacto/inicial.html' %}
+{% endblock %}
