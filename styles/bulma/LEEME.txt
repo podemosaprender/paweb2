@@ -1,0 +1,43 @@
+#INFO: ponerle nuestros colores a bulma
+
+## Intro
+SASS es una herramienta para generar archivos css usando variables
+ej. indicando solo colores, tipografias, etc.
+sin copiar todos los archivos.
+
+VER: https://bulma.io/documentation/customize/with-node-sass/
+
+## ¿Cómo se usa?
+
+_(despues de instalar como explico abajo)_
+
+Los estilos/variables se modifican en la carpeta sass
+
+Se genera una nueva version en la carpeta `build/` usando
+
+~~~
+npm run build-css
+~~~
+
+Luego podes copiar los archivos `.css` generados a otros proyectos,
+ej. el proyecto django
+
+Para que puedas probar mientras trabajas, podes abrir los archivos
+de `test_html` y ejecutar
+
+Si queres que se actualice automaticamente mientras vas probando cosas podes ejecutar
+
+~~~
+npm run dev-start
+~~~
+
+Y aparte si necesitas un servidor http 
+~~~
+npm run dev-http
+~~~
+
+## Instalar
+
+~~~
+npm i
+~~~

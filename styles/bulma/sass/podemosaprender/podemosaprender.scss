@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+//VER: en cada pagina de la ayuda de bulma hay una seccion "variables" ej https://bulma.io/documentation/layout/footer/#variables
+//VER: https://bulma.io/documentation/customize/variables/
+//VER: node_modules/bulma/sass/utilities/derived-variables.sass
+
+@import "../../node_modules/bulma/sass/utilities/_all"; //U: funciones de bulma ej findDarkColor
+
+//S: paleta podemosaprender
+$p1-azul: #0f4c5c;
+$p1-azul-oscuro: #082623;
+$p1-lila: #5f0953;
+$p1-lila-oscuro: #47073e;
+$p1-rojo: #770318;
+$p1-verde: #96c724;
+$p1-amarillo: #ffb90b;
+$p1-amarillo-dark: #e36414;
+
+//S: configurar variables de bulma
+$primary: $p1-azul-oscuro !default
+
+$footer-background-color: #333;
+$footer-color: #eee;
+
+.footer a, .footer a:visited {
+	color: $footer-color;
+}
+.footer a:hover {
+	color: findLightColor($footer-color);
+}
+
+//S: importar el resto de bulma, se puede comentar lo que NO usemos
+@import "../../node_modules/bulma/sass/base/_all";
+@import "../../node_modules/bulma/sass/elements/_all";
+@import "../../node_modules/bulma/sass/form/_all";
+@import "../../node_modules/bulma/sass/components/_all";
+@import "../../node_modules/bulma/sass/grid/_all";
+@import "../../node_modules/bulma/sass/helpers/_all";
+@import "../../node_modules/bulma/sass/layout/_all";
+;

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Podemos Aprender</title>
+		
+
+		<link rel="shortcut icon" href="/static/images/favico.png" type="image/x-icon">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../build/podemosaprender/css/podemosaprender.css" />
+		<script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
+	</head>
+	<body>
+		<button id="toTop" 
+						title="Go to top"
+						x-data="{ocultar: true}"
+						@click="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"
+						@scroll.window="ocultar= (document.body.scrollTop < 200 && document.documentElement.scrollTop < 200);"
+						:class="{ 'is-hidden': ocultar }"
+						>
+						<i class="fas fa-angle-up"></i>
+		</button>
+
+		<section class="hero is-fullheight-with-navbar is-dark tema1_bg">
+			<div class="hero-head">
+				
+<nav 
+	x-data="{ transparentBar: true, isOpen: false }"
+	class="navbar is-dark"
+  :class="{ 'navbar-dark transition duration-100' : !transparentBar, 'is-fixed-top': !transparentBar }"
+	@scroll.window="transparentBar= (document.querySelector('.hero').getBoundingClientRect().bottom>0);"
+	>
+
+	<div class="navbar-brand">
+		<a class="navbar-item" href="/">
+			<div class="logo is-size-6">PodemosAprender</div> 
+		</a>
+		<div class="navbar-burger burger"
+			@click="isOpen= !isOpen"
+			>
+			<span aria-hidden="true" /> <span aria-hidden="true" /> <span aria-hidden="true" />
+		</div>
+	</div>
+
+	<div id="navbarMenu" class="navbar-menu"
+		:class="{'is-active': isOpen}"
+		>
+		<div class="navbar-end">
+			<span class="navbar-item">
+				<a class="button is-outlined is-white" href="/#">
+					<span class="icon"> <i class="fas fa-home"></i> </span>
+					<span>Inicio</span>
+				</a>
+			</span>
+			<span class="navbar-item">
+				<a class="button is-outlined is-white" href="/#actividades">
+					<span class="icon"> <i class="fa-brands fa-superpowers"></i> </span>
+					<span>Actividades</span>
+				</a>
+			</span>
+			<span class="navbar-item">
+				<a class="button is-outlined is-white" href="/#contacto">
+					<span class="icon"> <i class="fa fa-book"></i> </span>
+					<span>Participar</span>
+				</a>
+			</span>
+		</div>
+	</div>
+</nav>
+
+
+			</div>
+			
+	<div class="hero-body">
+		<div class="container is-max-desktop has-text-centered">
+			<h1 class="title is-1">
+				Podemos Aprender
+			</h1>
+			<h2 class="subtitle is-4">
+				Avanzá tu proyecto y tu carrera.<br /> 
+				En la práctica.<br /> 
+				Con la ayuda de compañeros,<br />
+				expertos, potenciales clientes y socios.
+		</div>
+	</div>
+
+		</section>
+
+		
+		<main role="main" class="main-content">
+			
+	<div class="section services" id="actividades">
+		<div class="container">
+				<h1 class="title has-text-centered section-title">Seminarios</h1>
+				<h2 class="subtitle has-text-centered">
+					En sólo 2hs te vas pudiendo hacer una cosa que sirve, 
+					con un panorama completo, aunque empieces de cero.	
+				</h2>
+
+				<div class="columns">
+					
+						<div class="card column">
+							<div class="card-image">
+								<a href="/seminario/1">
+									<div class="tema1_bg px-1" style="height: 15em; border-radius: 5px;">
+										<div class="content has-text-white">
+											<div style="height: 2em; ">
+											#finanzas
+											</div>
+											<h1 class="is-size-3 has-text-white">Planificar, ganar, no perder.</h1>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					
+						<div class="card column">
+							<div class="card-image">
+								<a href="/seminario/2">
+									<div class="tema1_bg px-1" style="height: 15em; border-radius: 5px;">
+										<div class="content has-text-white">
+											<div style="height: 2em; ">
+											#crypto #finanzas
+											</div>
+											<h1 class="is-size-3 has-text-white">Comprar y vender fácil en BinanceP2P</h1>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					
+						<div class="card column">
+							<div class="card-image">
+								<a href="/seminario/3">
+									<div class="tema2_bg px-1" style="height: 15em; border-radius: 5px;">
+										<div class="content has-text-white">
+											<div style="height: 2em; ">
+											#blockhain #crypto
+											</div>
+											<h1 class="is-size-3 has-text-white">Usar y crear Tokens en redes Ethereum</h1>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					
+						<div class="card column">
+							<div class="card-image">
+								<a href="/seminario/4">
+									<div class="tema2_bg px-1" style="height: 15em; border-radius: 5px;">
+										<div class="content has-text-white">
+											<div style="height: 2em; ">
+											#blockchain #crypto #testing #automation
+											</div>
+											<h1 class="is-size-3 has-text-white">¿Cómo se hackea un Smart-Contract?</h1>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="section services" id="practicas">
+
+		<h1 class="title has-text-centered section-title">Prácticas profesionales</h1>
+
+		<h2 class="subtitle has-text-centered">
+			Desarrollá y mostrá la experiencia que querés. Llevate un prototipo o producto para mostrar, usando las mejores prácticas.
+		</h2>
+
+	</div>
+
+	<div class="section services" id="grupos">
+		<div
+				class="column about-me mt-3" >
+				<h1 class="title has-text-centered section-title">Grupos de Estudio</h1>
+				<h2 class="subtitle has-text-centered">
+					Se aprende mejor en equipo. Nos reunimos a investigar, probar, y publicar sobre un tema o herramienta.
+				</h2>
+		</div>
+	</div>
+
+	
+<div hx-get="/contacto" hx-trigger="load" hx-swap="outerHTML">Contacto</div>
+
+
+		<a class="button is-medium is-facebook" title="Compartir en Facebook">
+		<span class="icon"> <i class="fab fa-facebook fa-lg"></i></span>
+	</a>
+<nav class="level">
+		<div class="level-item">
+			<span class="icon">
+				<i class="fab fa-twitter"></i>
+			</span> &emsp;
+			<span class="icon">
+				<i class="fab fa-facebook"></i>
+			</span> &emsp;
+			<span class="icon">
+				<i class="fab fa-instagram"></i>
+			</span> &emsp;
+			<span class="icon">
+				<i class="fab fa-github"></i>
+			</span> &emsp;
+			<span class="icon">
+				<i class="fas fa-envelope"></i>
+			</span>
+		</div>
+	</div>
+</nav>
+
+	<div class="section contact" id="contacto">
+		<div class="container is-max-desktop has-background-grey-lighter px-4 py-4">
+			<h1 class="title has-text-centered section-title">
+				Inscribite 
+			</h1>
+			<div id="form_contacto" class="is-multiline">
+				<form hx-post="/contacto" hx-target="#form_contacto" method="POST">
+					<input type="hidden" name="csrfmiddlewaretoken" value="TgZfSTRifoVFFYK1U35EP8cT5iv3YN2bjbXKjWfqKg4gO17gOla3ud4ySsdzO7Y8">
+					
+
+
+
+
+  
+<div class="field">
+	
+
+    <label  for="id_de_mail"  class="label 
+        ">E-mail</label>
+    <div class="control ">
+      <input type="email" name="de_mail" maxlength="254" class=" control input" required id="id_de_mail">
+      
+      
+    </div>
+
+  
+</div>
+
+
+  
+<div class="field">
+	
+
+    <label  for="id_de_cel"  class="label 
+        ">Teléfono</label>
+    <div class="control ">
+      <input type="tel" name="de_cel" maxlength="128" class=" control input" id="id_de_cel">
+      
+      
+    </div>
+
+  
+</div>
+
+
+  
+<div class="field">
+	
+
+    <label  for="id_titulo"  class="label 
+        ">Asunto</label>
+    <div class="control ">
+      <input type="text" name="titulo" maxlength="200" class=" control input" required id="id_titulo">
+      
+      
+    </div>
+
+  
+</div>
+
+
+  
+<div class="field">
+	
+
+    <label class="label 
+        ">Mensaje</label>
+    <div class="control ">
+      <textarea name="texto" cols="40" rows="10" class=" control textarea" required id="id_texto">
+</textarea>
+      
+      
+    </div>
+
+  
+</div>
+
+
+  
+<div class="field">
+	
+<input class="g-recaptcha"
+    type="hidden"
+    name="captcha"
+     input_type="hidden" required_score="0.85" data-sitekey="6LeHyfEhAAAAAF7pvTH95ybZLSIpWjjKM5Jun_hh" class=" control" required id="id_captcha" data-widget-uuid="18c602db4c6745cf8928d1a8b1af4ac6" data-callback="onSubmit_18c602db4c6745cf8928d1a8b1af4ac6" data-size="normal"
+>
+  
+</div>
+
+
+
+					<div class="has-text-centered my-1">
+						This site is protected by reCAPTCHA and the Google
+						<a href="https://policies.google.com/privacy">Privacy Policy</a> and
+						<a href="https://policies.google.com/terms">Terms of Service</a> apply.
+					</div>
+					<div class="field">
+						<div class="control ">
+							<button class="button is-fullwidth is-primary">
+								Enviar&nbsp;&nbsp;
+								<i class="fas fa-paper-plane"></i>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+		</main>
+
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<p>
+				<span>All rights reserved. &copy;
+					<a href="https://www.podemosaprender.org">PodemosAprender</a> |
+					<a href="/static/tos.html">Terms of Service</a> |
+					<a href="/static/privacy.html">Privacy Policy</a> |
+					<a href="/static/contact.html">Contact Us</a>
+				</span>
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>

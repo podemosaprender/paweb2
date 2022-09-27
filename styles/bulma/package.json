@@ -1,0 +1,30 @@
+{
+    "name": "pa_bulma",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+      "build-css": "node-sass --omit-source-map-url --indent-type tab -o build/podemosaprender/css -r sass/podemosaprender",
+			"build-css-estudios": "node-sass --omit-source-map-url --indent-type tab -o build/estudios/css -r sass/estudios",
+			"build-css-dev": "npm run build-css && npm run build-css-estudios",
+			"dev-http": "node node_modules/http-server/bin/http-server",
+			"dev-start": "node node_modules/nodemon/bin/nodemon.js  --exec npm run build-css-dev"
+    },
+    "nodemonConfig": {
+        "restartable": "rs",
+        "ignore": [ ".git", "node_modules/**/node_modules" ],
+        "verbose": true,
+        "watch": [
+						"sass",
+            "test_html"
+        ],
+        "ext": "html,scss"
+    },
+    "author": "podemosaprender.org",
+    "license": "MIT",
+    "devDependencies": {
+        "bulma": "^0.9.4",
+        "http-server": "^14.1.1",
+        "node-sass": "^7.0.3",
+        "nodemon": "^2.0.20"
+    }
+}
