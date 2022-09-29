@@ -17,6 +17,127 @@
 {% endblock %}
 
 {% block content %}
+
+<div class="container">
+<div class="section has-background-gray-lighter" id="que-es">
+
+	<div class="tab-pane is-active" id="pane-2">
+		<div class="content">
+			<h1 class="title">¿Qué es Podemos Aprender?</h1>
+			Podemos Aprender (PA) es un espacio colaborativo, en donde cada integrante de la comunidad aporta sus conocimientos para que todos lo podamos aprovechar.
+			En PA aprendemos a <b>programar</b> , <b>vender</b>, <b>organizar</b> o <b>hacer negocios</b> a través de la <b>experiencia de otros</b>. <br> 
+			<h2 class="is-size-4">Esto te permitirá:</h2>
+			<p></p>
+			<ul>
+				<li>Utilizar recursos ya desarrollados que los integrantes comparten.</li>
+				<li>Conectar con equipos o personas ya preparadas para ejecutar proyectos y conseguir resultados.</li>
+				<li>Formar parte de una red amplia y diversa en cuanto a profesiones, nivel de formación y socio-económico.</li>
+				<li>Practicar cómo trabajar en equipo de manera interdisciplinaria.</li>	
+				<li>Experimentar de primera mano cómo un grupo de personas diferentes hacen del aprendizaje continuo un método de trabajo enriquecedor y económicamente viable.</li>
+				<li>Descubrir herramientas nuevas que puedes aplicar a tu trabajo para optimizarlo.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+<section class="hero is-info has-text-centered">
+	<div class="hero-body">
+	  <p class="title">
+		Testimonios
+	  </p>
+	  <p class="subtitle">
+		Palabras de quienes pasaron por aquí
+	  </p>
+	  <div class="container">
+		<div class="columns">
+		<div class="column"><div class="box">
+			<article class="media">
+				<div class="media-left">
+				  <figure class="image is-64x64">
+					<img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+				  </figure>
+				</div>
+				<div class="media-content">
+				  <div class="content">
+					<p>
+					  <strong>Fer Catz</strong> <small>@fercatz</small> <small>31m</small>
+					  <br>
+					  Cuando empecé a trabajar por mi cuenta sentí lo desafiante y único que puede ser buscar el camino propio. En PA encontré la compañia, la ayuda y los métodos que me guiaron para mantener el entusiasmo y llegar a dónde quería.
+					</p>
+				  </div>
+				  <nav class="level is-mobile">
+					<div class="level-left">
+					  <a class="level-item" aria-label="reply">
+						<span class="icon is-small">
+						  <i class="fas fa-reply" aria-hidden="true"></i>
+						</span>
+					  </a>
+					  <a class="level-item" aria-label="retweet">
+						<span class="icon is-small">
+						  <i class="fas fa-retweet" aria-hidden="true"></i>
+						</span>
+					  </a>
+					  <a class="level-item" aria-label="like">
+						<span class="icon is-small">
+						  <i class="fas fa-heart" aria-hidden="true"></i>
+						</span>
+					  </a>
+					</div>
+				  </nav>
+				</div>
+			  </article>
+		</div></div>
+		<div class="column">
+			<div class="box">
+				<article class="media">
+					<div class="media-left">
+					  <figure class="image is-64x64">
+						<img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+					  </figure>
+					</div>
+					<div class="media-content">
+					  <div class="content">
+						<p>
+						  <strong>Daniela Regert</strong> <small>@danielaregert</small> <small>1m</small>
+						  <br>
+						  Programar puede ser una tarea solitaria, y si estás empezando, es difícil cuando te estancás, te mareás buscando ayuda en blogs. Desde que llegué a PA aprendí un montón de herramientas para lograr entregarle el producto al cliente a tiempo.
+						</p>
+					  </div>
+					  <nav class="level is-mobile">
+						<div class="level-left">
+						  <a class="level-item" aria-label="reply">
+							<span class="icon is-small">
+							  <i class="fas fa-reply" aria-hidden="true"></i>
+							</span>
+						  </a>
+						  <a class="level-item" aria-label="retweet">
+							<span class="icon is-small">
+							  <i class="fas fa-retweet" aria-hidden="true"></i>
+							</span>
+						  </a>
+						  <a class="level-item" aria-label="like">
+							<span class="icon is-small">
+							  <i class="fas fa-heart" aria-hidden="true"></i>
+							</span>
+						  </a>
+						</div>
+					  </nav>
+					</div>
+				  </article>
+			</div>
+		</div>
+	</div>
+		
+	  
+</div>
+  </section>
+
+
+
+
+
+
 	<div class="section services" id="actividades">
 		<div class="container">
 				<h1 class="title has-text-centered section-title">Seminarios</h1>
@@ -26,9 +147,6 @@
 				</h2>
 			</div>
 		</div>
-
-
-
 	<section class="container">
 		<div class="columns features">
 			{% for seminario in seminarios %}
@@ -37,7 +155,10 @@
 				<header class="card-header">
 					
 					<h2 class="card-header-title is-size-6">
-						<a href="{{ seminario.hashtags }}">{{ seminario.hashtags }}</a> 
+						<div class="tags are-medium">
+						<a class="tag is-link is-light" 
+						href="{{ seminario.hashtags }}">{{ seminario.hashtags }}</a> 
+					</div>
 					</h2>
 					<button class="card-header-icon" aria-label="more options">
 					  <span class="icon">
@@ -66,12 +187,9 @@
 	  </section>
 
 
-
-
-
 	<div class="section has-background-gray-lighter" id="practicas">
 
-		<h1 class="title has-text-centered section-title">Prácticas profesionales</h1>
+		<h1 class="title has-text-centered section-title">Novedades</h1>
 
 		<h2 class="subtitle has-text-centered">
 			Desarrollá y mostrá la experiencia que querés. Llevate un prototipo o producto para mostrar, usando las mejores prácticas.
@@ -79,15 +197,6 @@
 
 	</div>
 
-	<div class="section services" id="grupos">
-		<div
-				class="column about-me mt-3" >
-				<h1 class="title has-text-centered section-title">Grupos de Estudio</h1>
-				<h2 class="subtitle has-text-centered">
-					Se aprende mejor en equipo. Nos reunimos a investigar, probar, y publicar sobre un tema o herramienta.
-				</h2>
-		</div>
-	</div>
 
 	{% include 'paweb/partes/contacto/inicial.html' %}
 {% endblock %}
