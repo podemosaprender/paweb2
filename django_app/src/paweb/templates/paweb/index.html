@@ -8,8 +8,8 @@
 				Podemos<span style="font-size: 1px"> </span>Aprender
 			</h1>
 			<h2 class="subtitle is-4">
-				Avanzá tu proyecto y tu carrera.<br /> 
-				En la práctica.<br /> 
+				Avanzá tu proyecto y tu carrera<br /> 
+				en la práctica.<br /> 
 				Con la ayuda de compañeros,<br />
 				expertos, potenciales clientes y socios.
 		</div>
@@ -24,28 +24,49 @@
 					En sólo 2hs te vas pudiendo hacer una cosa que sirve, 
 					con un panorama completo, aunque empieces de cero.	
 				</h2>
-
-				<div class="columns">
-					{% for seminario in seminarios %}
-						<div class="card column">
-							<div class="card-image">
-								<a href="{% url 'actividad' pk=seminario.pk %}">
-									<div class="{{ seminario.estilo }}_bg px-1" style="height: 15em; border-radius: 5px;">
-										<div class="content has-text-white">
-											<div style="height: 2em; ">
-											{{ seminario.hashtags }}
-											</div>
-											<h1 class="is-size-3 has-text-white">{{ seminario.titulo }}</h1>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-					{% endfor %}
-				</div>
 			</div>
 		</div>
-	</div>
+
+
+
+	<section class="container">
+		<div class="columns features">
+			{% for seminario in seminarios %}
+		  <div class="column is-4">
+			<div class="card is-shady">
+				<header class="card-header">
+					
+					<h2 class="card-header-title is-size-6">
+						<a href="{{ seminario.hashtags }}">{{ seminario.hashtags }}</a> 
+					</h2>
+					<button class="card-header-icon" aria-label="more options">
+					  <span class="icon">
+						<a href="" title="Me interesa"><i class="fa-solid fa-heart" aria-hidden="true" alt="corazón"></i></a>
+					  </span>
+					</button>
+				  </header>
+				
+				<div class="card-image">
+				<figure class="image is-4by3">
+				  <img src="https://source.unsplash.com/RWnpyGtY1aU" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+				</figure>
+			  </div>
+			  <div class="card-content">
+				<div class="content">
+				  <h4>{{ seminario.titulo }}</h4>
+				  <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque <br>
+				  <b>Fecha de inicio:</b> 12/04/2022</p>
+				  <span class="button is-link modal-button" data-target="modal-image2">Inscribirme!</span>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  {% endfor %}
+		</div>
+	  </section>
+
+
+
 
 
 	<div class="section has-background-gray-lighter" id="practicas">
