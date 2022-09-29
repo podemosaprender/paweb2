@@ -3,11 +3,12 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-      "build-css": "node-sass --omit-source-map-url --indent-type tab -o build/podemosaprender/css -r sass/podemosaprender",
-			"build-css-estudios": "node-sass --omit-source-map-url --indent-type tab -o build/estudios/css -r sass/estudios",
+			"copiar-a-django": "npm run build-css-dev && cp -r build/*  ../../django_app/src/paweb/static/css/",
+      "build-css": "node-sass --omit-source-map-url --indent-type tab -o build/podemosaprender -r sass/podemosaprender",
+			"build-css-estudios": "node-sass --omit-source-map-url --indent-type tab -o build/estudios -r sass/estudios",
 			"build-css-dev": "npm run build-css && npm run build-css-estudios",
 			"dev-http": "node node_modules/http-server/bin/http-server",
-			"dev-start": "node node_modules/nodemon/bin/nodemon.js  --exec npm run build-css-dev"
+			"dev-start": "node node_modules/nodemon/bin/nodemon.js  --exec npm run copiar-a-django"
     },
     "nodemonConfig": {
         "restartable": "rs",
