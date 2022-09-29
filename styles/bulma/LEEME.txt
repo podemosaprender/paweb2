@@ -8,7 +8,19 @@ sin copiar todos los archivos.
 VER: https://bulma.io/documentation/customize/with-node-sass/
 
 ## ¿Cómo se usa?
+    
+Lanzar el proyecto django:
 
+~~~
+. xedj/scripts/activate
+cd django_app/src/
+python manage.py runserver 0.0.0.0:8000
+~~~
+
+~~~
+ cd styles/bulma/
+ npm run dev-start
+~~~
 _(despues de instalar como explico abajo)_
 
 Los estilos/variables se modifican en la carpeta sass
@@ -41,3 +53,5 @@ npm run dev-http
 ~~~
 npm i
 ~~~
+
+##
