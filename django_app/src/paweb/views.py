@@ -3,8 +3,10 @@ from .forms import MensajeContactoForm
 from .models import *
 
 def index(request):
+	testimonios= Testimonio.objects.all()	
 	seminarios= Actividad.objects.all()	
 	return render(request, 'paweb/index.html', {
+		'testimonios': testimonios,
 		'seminarios': seminarios,	
 	})
 
@@ -36,3 +38,6 @@ def contacto(request):
 		'form': form
 	})
 
+def billetera(request):
+	return render(request, 'paweb/billetera.html', {
+	})

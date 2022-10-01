@@ -2,16 +2,130 @@
 {% load static %}
 
 {% block hero %}
-	<div class="hero-body">
-		<div class="container is-max-desktop has-text-centered">
-			<h1 class="title is-1">
-				Podemos<span style="font-size: 1px"> </span>Aprender
-			</h1>
-			<h2 class="subtitle is-4">
-				Avanzá tu proyecto y tu carrera<br /> 
-				en la práctica.<br /> 
-				Con la ayuda de compañeros,<br />
-				expertos, potenciales clientes y socios.
+<div class="hero-body">
+	<div class="container NOis-max-desktop">
+
+		<h1 class="title is-3">
+			Hola,<span style="font-size: 1px"> </span>@nombre_de_usuario!
+		</h1>
+		<h2 class="subtitle is-4">
+			Bienvenido a tu billetera </h2>
+		<p>Enviá, recibí y revisá tus créditos en este panel.</p>
+
+		<div class="box">
+			<div class="columns">
+				<div class="column is-6">
+					<span class="is-family-primary has-text-black">Crédito: </span>
+					<span class="is-family-sans-serif has-text-black is-size-4">100 unidades</span>
+				</div>
+
+				<div class="column is-6">
+					<span class="is-family-primary has-text-black">Actividad: </span>
+					<span class="is-family-sans-serif has-text-black is-size-4">2 servicios activos</span>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="tabs is-toggle is-fullwidth">
+			<ul>
+				<li class="Xis-active">
+					<a href="#">
+						<span class="icon is-small"><i class="fa-solid fa-arrow-right"></i></span>
+						<span>Cargar créditos</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<span class="icon is-small"><i class="fa-sharp fa-solid fa-share"></i></span>
+						<span>Transferir</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<span class="icon is-small"><i class="fa-solid fa-book"></i></span>
+						<span>Historial</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<span class="icon is-small"><i class="fa-solid fa-store"></i></span>
+						<span>Ofrecer producto o servicio</span>
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+
+	<div class="section NOhero is-medium has-background-gray-lighter" id="que-es">
+
+		<div class="NOtab-pane NOis-active" id="pane-2">
+			<div class="content">
+				<div class="container">
+				<h1 class="title">Transferir</h1>
+				<p>Por favor, complete la siguiente información</p>
+				<div>
+
+					<div class="columns">
+						<div class="column is-6">
+							<div class="field">
+								<label class="label">Para:</label>
+								<div class="control">
+									<input class="input" type="text" placeholder="Ingrese usuario">
+								</div>
+								<p class="help">Destinatario a quien quiero realizarle la transferencia</p>
+							</div>
+						</div>
+						<div class="column is-6">
+							<div class="field">
+								<label class="label">Crédito:</label>
+								<div class="control">
+									<input class="input" type="text" placeholder="Cuantas unidades">
+								</div>
+
+								<p class="help">Destinatario a quien quiero realizarle la transferencia</p>
+							</div>
+						</div>
+					</div>
+					
+
+
+
+
+					<div class="field">
+						<label class="label">Por:</label>
+						<div class="control">
+							<input class="input" type="text" placeholder="Mensaje">
+						</div>
+						<p class="help">Qué producto o servicio</p>
+					</div>
+
+					<div class="field is-grouped is-grouped-centered">
+						<p class="control">
+							<a class="button is-link">
+								Enviar
+							</a>
+						</p>
+						<p class="control">
+							<a class="button is-light">
+								Cancelar
+							</a>
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		</div>
+
+</div>
+</div>
+
 {% endblock %}

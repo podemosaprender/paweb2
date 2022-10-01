@@ -44,4 +44,13 @@ class Actividad(models.Model): #U: seminario, grupo, etc.
 	def __str__(self):
 		return f'{self.titulo} {self.hashtags}'
 
-	
+class Testimonio(models.Model): #U: Testimonio en el index
+	class Meta:
+		verbose_name_plural = "Testimonios"
+
+	fh_creado= models.DateTimeField(default=timezone.now)
+	de_quien= models.CharField(_('de_quien'), max_length=40)
+	texto= models.TextField(_('texto'), max_length=300)
+
+	def __str__(self):
+		return f'{self.fh_creado} {self.de_quien} {self.texto[0:15]}'	

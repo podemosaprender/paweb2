@@ -4,3 +4,4 @@ from .models import *
 
 admin.site.register(MensajeContacto)
 admin.site.register(Actividad)
+admin.site.register(Testimonio)
