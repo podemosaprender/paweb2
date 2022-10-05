@@ -62,7 +62,7 @@
 
 {% block content %}
 
-	<div class="section NOhero is-medium has-background-gray-lighter" id="que-es">
+<div class="section is-medium" id="transferencia">
 
 		<div class="NOtab-pane NOis-active" id="pane-2">
 			<div class="content">
@@ -126,6 +126,303 @@
 		</div>
 
 </div>
+
+<div class="section is-medium has-background-light" id="actividad">
+	<div class="" id="actividad ">
+		<div class="content">
+			<div class="container">
+			<h1 class="title">Historial</h1>
+			<p class="subtitle">Tu actividad en PodemosAprender</p>
+			<h3>Transacciones</h3>
+			<table class="table has-background-info-light" id="transacciones">
+				<thead>
+					<tr>
+						<th title="ID"><abbr title="">ID</abbr></th>	
+						<th><abbr title="">De:</abbr></th>
+						<th><abbr title="">A:</abbr></th>
+						<th><abbr title="">Por:</abbr></th>
+						<th><abbr title="">Fecha y hora</abbr></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>123</th>
+						<th>Abuela</th>
+						<th>Carlos</th>
+						<th>Arreglo de enchufe</th>
+						<th>12/10/2022 12:30hs</th>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<h3>Productos o servicios</h3>
+			<table class="table has-background-info-light">
+				<thead>
+					<tr>
+						<th>Qué:</th>
+						<th>Para: </th>
+						<th>Realizado por:</th>
+						<th>Fecha de contratación</th>
+						<th>Caché</th>
+						<th>Plazo acordado</th>
+						<th>Estado</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Arreglo de techo</th>
+						<th>Raul</th>
+						<th>Yo</th>
+						<th>10-03</th>
+						<th>60 unidades</th>
+						<th>20 días habiles</th>
+						<th>Finalizado</th>
+					</tr>
+					<tr>
+						<th>Clases de inglés</th>
+						<th>Yo</th>
+						<th>Cora</th>
+						<th>11-05</th>
+						<th>20 unidades</th>
+						<th>10 días habiles</th>
+						<th>Finalizado</th>
+					</tr>
+					<tr class="is-selected">
+						<th>Sopa de verduras</th>
+						<th>Yo</th>
+						<th>Ricardo</th>
+						<th>11-05</th>
+						<th>29 unidades</th>
+						<th>20 días habiles</th>
+						<th>Activo</th>
+					</tr>
+				</tbody>
+
+			</table>
+
+			</div>
+			
+		</div>
+	</div>
+
+
+</div>
+
+<div class="section is-medium" id="ofrecer">
+
+	<div class="NOtab-pane NOis-active" id="pane-2">
+		<div class="content">
+			<div class="container">
+			<h1 class="title">Ofrecer producto o servicio</h1>
+			<p>Por favor, completá la siguiente información</p>
+			<div class="field">
+				<label class="label">Producto o servicio</label>
+				<div class="control">
+				  <input class="input" type="text" placeholder="Lo que tenés para ofrecer">
+				  <p class="help">Creá un titular para tu producto/servicio</p>
+				</div>
+				  </div>
+				  <div class="columns">
+					<div class="column">
+						<div class="field">
+							<label class="label">Categoría</label>
+							<div class="control">
+							  <div class="select">
+								<select>
+								  <option>Finanzas</option>
+								  <option>Informática</option>
+								  <option>Reparación</option>
+								  <option>Cuidado</option>
+								  <option>Otros servicios</option>
+								</select>
+							  </div>
+							  <p class="help">Elegí la categoría que mejor se adecúe</p>
+							</div>
+						  </div>
+					</div>
+					<div class="column is-four-fifths">
+						<div class="field">
+							<label class="label">Por:</label>
+							<div class="control">
+							  <input class="input" type="text" placeholder="Cuántas unidades vale tu trabajo/servicio">
+							  <p class="help">Ponele un valor</p>
+							</div>
+							</div>
+					</div>
+				  </div>
+
+				  
+				  <div class="field">
+					<label class="label">Texto explicativo</label>
+					<div class="control">
+					  <textarea class="textarea" placeholder="Explicá tu servicio/producto"></textarea>
+					</div>
+					<p class="help">Describí que ofrecés de forma clara y concisa, para que todos lo entiendan.</p>
+				  </div>
+				  
+				  <div class="field">
+					<div class="control">
+					  <label class="checkbox">
+						<input type="checkbox">
+						Estoy de acuerdo con <a href="#">los términos y condiciones</a>
+					  </label>
+					</div>
+				  </div>
+				  
+				  <div class="field">
+					Deseo recibir notificaciones de <b>PodemosAprender</b> por mail.
+					<div class="control">
+					
+					  <label class="radio">
+						<input type="radio" name="question">
+						Yes
+					  </label>
+					  <label class="radio">
+						<input type="radio" name="question">
+						No
+					  </label>
+					</div>
+				  </div>
+				  
+				  <div class="field is-grouped is-grouped-centered">
+					<div class="control">
+					  <button class="button is-link">Publicar</button>
+					</div>
+					<div class="control">
+					  <button class="button is-link is-light">Borrar</button>
+					</div>
+				  </div>
+			
+				</div>
+
+			  </div>
+		</div>
+</div>
+
+<div class="section has-background-info-light">
+	<div class="" id="tienda">
+		<div class="content">
+			<div class="container">
+			<h1 class="title">Tienda</h1>
+			<div class="columns features">
+				<div class="column is-4">
+					<div class="card is-shady">
+						<header class="card-header">
+		
+							<h2 class="card-header-title is-size-6">
+								<div class="tags are-medium">
+									<a class="tag is-link is-light" href="">Categoría</a>
+								</div>
+							</h2>
+							<button class="card-header-icon" aria-label="more options">
+								<span class="icon">
+									<a href="" title="Me interesa"><i class="fa-solid fa-heart" aria-hidden="true"
+											alt="corazón"></i></a>
+								</span>
+							</button>
+						</header>
+		
+						<div class="card-content">
+							<div class="content">
+								<a href="">
+									<h4>Pastafrola de la Nona</h4>
+								</a>
+								<p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec.
+									Integer enim neque</p>
+								<p>
+									<b>Fecha de inicio:</b> 12/04/2022 <br>
+									<b>Ofrecido por:</b> Nombre-usuario
+								</p>
+								<span class="button is-link modal-button" data-target="modal-image2">Inscribirme!</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-4">
+					<div class="card is-shady">
+						<header class="card-header">
+		
+							<h2 class="card-header-title is-size-6">
+								<div class="tags are-medium">
+									<a class="tag is-link is-light" href="">Categoría</a>
+								</div>
+							</h2>
+							<button class="card-header-icon" aria-label="more options">
+								<span class="icon">
+									<a href="" title="Me interesa"><i class="fa-solid fa-heart" aria-hidden="true"
+											alt="corazón"></i></a>
+								</span>
+							</button>
+						</header>
+		
+						<div class="card-content">
+							<div class="content">
+								<a href="">
+									<h4>Pastafrola de la Nona</h4>
+								</a>
+								<p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec.
+									Integer enim neque</p>
+								<p>
+									<b>Fecha de inicio:</b> 12/04/2022 <br>
+									<b>Ofrecido por:</b> Nombre-usuario
+								</p>
+								<span class="button is-link modal-button" data-target="modal-image2">Inscribirme!</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column is-4">
+					<div class="card is-shady">
+						<header class="card-header">
+		
+							<h2 class="card-header-title is-size-6">
+								<div class="tags are-medium">
+									<a class="tag is-link is-light" href="">Categoría</a>
+								</div>
+							</h2>
+							<button class="card-header-icon" aria-label="more options">
+								<span class="icon">
+									<a href="" title="Me interesa"><i class="fa-solid fa-heart" aria-hidden="true"
+											alt="corazón"></i></a>
+								</span>
+							</button>
+						</header>
+		
+						<div class="card-content">
+							<div class="content">
+								<a href="">
+									<h4>Pastafrola de la Nona</h4>
+								</a>
+								<p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec.
+									Integer enim neque</p>
+								<p>
+									<b>Fecha de inicio:</b> 12/04/2022 <br>
+									<b>Ofrecido por:</b> Nombre-usuario
+								</p>
+								<span class="button is-link modal-button" data-target="modal-image2">Inscribirme!</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="pagination" role="navigation" aria-label="pagination">
+				<a class="pagination-previous is-disabled" title="This is the first page">Anterior</a>
+				<a class="pagination-next">Pagina siguiente</a>
+				<ul class="pagination-list">
+				  <li>
+					<a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+				  </li>
+				  <li>
+					<a class="pagination-link" aria-label="Goto page 2">2</a>
+				  </li>
+				  <li>
+					<a class="pagination-link" aria-label="Goto page 3">3</a>
+				  </li>
+				</ul>
+			  </nav>
+			</div>
+		</div>
+	</div>
 </div>
 
 {% endblock %}
