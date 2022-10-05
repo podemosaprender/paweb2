@@ -27,12 +27,14 @@
 						<i class="fas fa-angle-up"></i>
 		</button>
 
-		<section class="hero is-fullheight-with-navbar is-dark {% block tema %}tema1{% endblock %}_bg">
-			<div class="hero-head">
-				{% include 'paweb/partes/navbar.html' %}
-			</div>
-			{% block hero %}{% endblock %}
-		</section>
+		{% block NOhero %}
+			<section class="hero is-fullheight-with-navbar is-dark {% block tema %}tema1{% endblock %}_bg">
+				<div class="hero-head">
+					{% include 'paweb/partes/navbar.html' %}
+				</div>
+				{% block hero %}{% endblock %}
+			</section>
+		{% endblock %}
 
 		{% block antes_de_content %}{% endblock %}
 		<main role="main" class="main-content">

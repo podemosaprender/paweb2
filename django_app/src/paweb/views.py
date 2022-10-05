@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, HttpResponse, HttpResponseRedirect
+from django.core.paginator import Paginator
 from .forms import MensajeContactoForm
 from .models import *
+
 
 def index(request):
 	testimonios= Testimonio.objects.all()	
@@ -40,4 +42,16 @@ def contacto(request):
 
 def billetera(request):
 	return render(request, 'paweb/billetera.html', {
+	})
+
+#VER: https://docs.djangoproject.com/en/4.1/topics/pagination/#using-paginator-in-a-view-function
+
+def tienda(request):
+	avisos = Aviso.objects.all() #traer todos los avisos
+	paginator = Paginator(avisos, 3) # Muestra n avisos por página
+	page_number = request.GET.get('page')
+	pagina_avisos = paginator.get_page(page_number)
+	return render(request, 'paweb/tienda.html', {
+		'avisos': pagina_avisos, 
+		'paginas': range(1,5) #TODO: usar página actual y máximo de paginador
 	})

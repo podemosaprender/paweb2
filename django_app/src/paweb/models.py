@@ -54,3 +54,16 @@ class Testimonio(models.Model): #U: Testimonio en el index
 
 	def __str__(self):
 		return f'{self.fh_creado} {self.de_quien} {self.texto[0:15]}'	
+
+
+class Aviso(models.Model): #U: Aviso en el index
+	class Meta:
+		verbose_name_plural = "Avisos"
+
+	fh_creado= models.DateTimeField(default=timezone.now)
+	de_quien= models.CharField(_('de_quien'), max_length=40)
+	texto= models.TextField(_('texto'), max_length=300)
+	categorias= models.CharField(_('categorias'), max_length=200)
+
+	def __str__(self):
+		return f'{self.fh_creado} {self.de_quien} {self.texto[0:15]}'	

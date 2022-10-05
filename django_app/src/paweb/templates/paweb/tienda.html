@@ -1,0 +1,115 @@
+{% extends 'paweb/partes/base.html' %}
+{% load static %}
+
+{% block NOhero %}
+#TODO: navbar
+{% endblock %}
+
+{% block content %}
+
+<div class="section has-background-info-light">
+    <div class="" id="tienda">
+        <div class="content">
+            <div class="container">
+                <h1 class="title">Tienda</h1>
+                <!-- Main container -->
+                <nav class="level">
+                    <!-- Left side -->
+                    <div class="level-left">
+                        <div class="level-item">
+                            <p class="subtitle is-5">
+                                <strong>123</strong> posts
+                            </p>
+                        </div>
+                        <div class="level-item">
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <input class="input" type="text" placeholder="Find a post">
+                                </p>
+                                <p class="control">
+                                    <button class="button">
+                                        Search
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right side -->
+                    <div class="level-right">
+                        <p class="level-item"><strong>All</strong></p>
+                        <p class="level-item"><a>Published</a></p>
+                        <p class="level-item"><a>Drafts</a></p>
+                        <p class="level-item"><a>Deleted</a></p>
+                        <p class="level-item"><a class="button is-success">New</a></p>
+                    </div>
+                </nav>
+                <div class="columns features is-flex-wrap is-multiline">
+                    {% for aviso in avisos %}
+                    <div class="column is-4">
+                        <div class="card is-shady">
+                            <header class="card-header">
+
+                                <h2 class="card-header-title">
+                                    <div class="tags are-medium">
+                                        <a class="tag is-link is-light" href="">{{ aviso.categorias }}</a>
+                                    </div>
+                                </h2>
+                                <button class="card-header-icon" aria-label="more options">
+                                    <span class="icon">
+                                        <a href="" title="Me interesa"><i class="fa-solid fa-heart" aria-hidden="true"
+                                                alt="corazón"></i></a>
+                                    </span>
+                                </button>
+                            </header>
+
+                            <div class="card-content">
+                                <div class="content">
+                                    <a href="">
+                                        <h4>{{ aviso.titulo }}</h4>
+                                    </a>
+                                    <p>{{ aviso.texto }}</p>
+                                    <p>
+                                        <b>Fecha de inicio:</b> 12/04/2022 <br>
+                                        <b>Ofrecido por:</b> {{ aviso.de_quien }}
+                                    </p>
+                                    <span class="button is-link modal-button"
+                                        data-target="modal-image2">Contratar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <nav class="pagination" role="navigation" aria-label="pagination">
+                    {% if avisos.has_previous %}
+                        <a class="pagination-previous" href="?page={{ avisos.previous_page_number }}">Anterior</a>
+                    {% endif %}
+
+                    {% if avisos.has_next %}
+                        <a class="pagination-next" href="?page={{ avisos.next_page_number }}">Página siguiente</a>
+                    {% endif %}
+
+                    <ul class="pagination-list">
+                        {% for pagina in paginas %}
+
+                             <li>
+                                <a 
+                                    class="pagination-link {% if avisos.number == forloop.counter %} is-current {% endif %}" 
+                                    aria-label="Page {{ forloop.counter }}" 
+                                    aria-current="page" 
+                                    href="?page={{ forloop.counter }}"
+                                > {{ forloop.counter }}
+                                </a>
+                             </li>
+                        {% endfor %}
+
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
