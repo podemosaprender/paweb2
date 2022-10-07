@@ -1,0 +1,86 @@
+{% extends 'paweb/partes/base.html' %}
+{% load static %}
+
+
+{% block NOhero %}
+
+ {% include 'paweb/partes/navbar.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="section is-medium has-background-light" id="actividad">
+	<div class="" id="actividad ">
+		<div class="content">
+			<div class="container">
+			<h1 class="title">Historial</h1>
+			<p class="subtitle">Tu actividad en PodemosAprender</p>
+			<h3>Transacciones</h3>
+			<table class="table has-background-info-light is-fullwidth" id="transacciones">
+				<thead>
+					<tr>
+						<th title="ID"><abbr title="">ID</abbr></th>	
+						<th><abbr title="">De:</abbr></th>
+						<th><abbr title="">A:</abbr></th>
+						<th><abbr title="">Por:</abbr></th>
+						<th><abbr title="">Fecha y hora</abbr></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>123</th>
+						<th>Abuela</th>
+						<th>Carlos</th>
+						<th>Arreglo de enchufe</th>
+						<th>12/10/2022 12:30hs</th>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<h3>Productos o servicios</h3>
+			<table class="table has-background-info-light is-fullwidth">
+				<thead>
+					<tr>
+						<th>Qué:</th>
+						<th>Para: </th>
+						<th>Inicio:</th>
+						<th>Caché</th>
+						<th>Entrega:</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Arreglo de techo</th>
+						<th>Raul</th>
+						<th>10-03</th>
+						<th>60</th>
+						<th>20 días habiles</th>
+					</tr>
+					<tr>
+						<th>Clases de inglés</th>
+						<th>Yo</th>
+						<th>11-05</th>
+						<th>20</th>
+						<th>10 días habiles</th>
+					</tr>
+					<tr class="is-selected">
+						<th>Sopa de verduras</th>
+						<th>Yo</th>
+						<th>11-05</th>
+						<th>29</th>
+						<th>20 días habiles</th>
+					</tr>
+				</tbody>
+
+			</table>
+
+			</div>
+			
+		</div>
+	</div>
+
+
+</div>
+
+
+{% endblock %}

@@ -62,8 +62,25 @@ class Aviso(models.Model): #U: Aviso en el index
 
 	fh_creado= models.DateTimeField(default=timezone.now)
 	de_quien= models.CharField(_('de_quien'), max_length=40)
+	titulo= models.CharField(_('titulo'), max_length=40)
 	texto= models.TextField(_('texto'), max_length=300)
+	cuanto= models.IntegerField(_('cuanto'))
 	categorias= models.CharField(_('categorias'), max_length=200)
 
 	def __str__(self):
 		return f'{self.fh_creado} {self.de_quien} {self.texto[0:15]}'	
+
+
+class Transaccion(models.Model): #U: Transacciones
+	class Meta:
+		verbose_name_plural = "Transacciones"
+
+	fh_creado= models.DateTimeField(default=timezone.now)
+	de_quien= models.CharField(_('de_quien'), max_length=40)
+	a_quien= models.CharField(_('a_quien'), max_length=40)
+	por= models.CharField(_('por'), max_length=200)
+	cuanto= models.IntegerField(_('cuanto'))
+	
+
+	def __str__(self):
+		return f'{self.fh_creado} {self.de_quien} -> {self.a_quien} {self.cuanto} {self.por[0:15]} '	

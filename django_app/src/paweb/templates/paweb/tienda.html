@@ -1,13 +1,16 @@
 {% extends 'paweb/partes/base.html' %}
 {% load static %}
 
+
 {% block NOhero %}
-#TODO: navbar
+
+ {% include 'paweb/partes/navbar.html' %}
 {% endblock %}
 
 {% block content %}
 
-<div class="section has-background-info-light">
+
+<div class="section is-medium has-background-info-light">
     <div class="" id="tienda">
         <div class="content">
             <div class="container">
@@ -18,17 +21,17 @@
                     <div class="level-left">
                         <div class="level-item">
                             <p class="subtitle is-5">
-                                <strong>123</strong> posts
+                                <strong>123</strong> avisos
                             </p>
                         </div>
                         <div class="level-item">
                             <div class="field has-addons">
                                 <p class="control">
-                                    <input class="input" type="text" placeholder="Find a post">
+                                    <input class="input" type="text" placeholder="Encontrá un aviso">
                                 </p>
                                 <p class="control">
                                     <button class="button">
-                                        Search
+                                        Buscar
                                     </button>
                                 </p>
                             </div>
@@ -37,11 +40,10 @@
 
                     <!-- Right side -->
                     <div class="level-right">
-                        <p class="level-item"><strong>All</strong></p>
-                        <p class="level-item"><a>Published</a></p>
-                        <p class="level-item"><a>Drafts</a></p>
-                        <p class="level-item"><a>Deleted</a></p>
-                        <p class="level-item"><a class="button is-success">New</a></p>
+                        <p class="level-item"><strong>Todos</strong></p>
+                        <p class="level-item"><a>Publicados</a></p>
+                        <p class="level-item"><a>Mis favoritos</a></p>
+                        <p class="level-item"><a class="button is-success">Nuevo</a></p>
                     </div>
                 </nav>
                 <div class="columns features is-flex-wrap is-multiline">
@@ -65,16 +67,17 @@
 
                             <div class="card-content">
                                 <div class="content">
-                                    <a href="">
+                                    <a href="/transaccion?por={{ aviso.titulo }}&a_quien={{ aviso.de_quien }}&cuanto={{ aviso.cuanto }}">
                                         <h4>{{ aviso.titulo }}</h4>
                                     </a>
                                     <p>{{ aviso.texto }}</p>
                                     <p>
+                                        <b>Cuánto:</b> {{ aviso.cuanto }} <br>
                                         <b>Fecha de inicio:</b> 12/04/2022 <br>
                                         <b>Ofrecido por:</b> {{ aviso.de_quien }}
                                     </p>
-                                    <span class="button is-link modal-button"
-                                        data-target="modal-image2">Contratar</span>
+                                    <a href="/transaccion?por={{ aviso.titulo }}&a_quien={{ aviso.de_quien }}&cuanto={{ aviso.cuanto }}" class="button is-link modal-button"
+                                        data-target="modal-image2">Contratar</a>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +96,7 @@
                     <ul class="pagination-list">
                         {% for pagina in paginas %}
 
-                             <li>
+                            <li>
                                 <a 
                                     class="pagination-link {% if avisos.number == forloop.counter %} is-current {% endif %}" 
                                     aria-label="Page {{ forloop.counter }}" 
@@ -103,7 +106,6 @@
                                 </a>
                              </li>
                         {% endfor %}
-
                     </ul>
                 </nav>
 

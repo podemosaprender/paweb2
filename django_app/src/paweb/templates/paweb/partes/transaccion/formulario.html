@@ -1,0 +1,35 @@
+{% extends base_template  %}
+{% load static %}
+{% load bulma_tags %}
+
+{% block NOhero %}
+
+ {% include 'paweb/partes/navbar.html' %}
+{% endblock %}
+
+{% block content %}
+	<div class="section contact" id="transaccion">
+		<div class="container">
+		<div class="box has-background-grey-lighter is-max-desktop px-4 py-4">
+			<h1 class="title has-text-centered section-title">
+				Transferir
+			</h1>
+			<div id="form_transaccion" class="is-multiline">
+				<form hx-post="/transaccion" hx-target="#form_transaccion" method="POST">
+					{% csrf_token %}
+					{{ form|bulma }}
+
+					<div class="field">
+						<div class="control ">
+							<button class="button is-fullwidth button-dark">
+								Confirmar&nbsp;&nbsp;
+								<i class="fas fa-paper-plane"></i>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+		{% endblock %}
+

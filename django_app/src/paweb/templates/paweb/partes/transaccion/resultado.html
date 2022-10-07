@@ -1,0 +1,20 @@
+{# avisa envio ok, y boton para nuevo form de contacto embebido #}
+<div class="section-light contact" id="transaccion">
+	<div class="container">
+		<div
+				id="form_transaccion"
+				class="columns is-multiline"
+				data-aos="fade-in-up"
+				data-aos-easing="linear"
+				>
+				<div class="has-text-centered">
+					<h1>Tu transacción ha sido procesada</h1>
+					<p><button hx-get="/transaccion" hx-target="#transaccion" hx-swap="outerHTML" hx-trigger="click" class="button is-primary is-outlined ">
+						<span class="icon"> <i class="fa fa-book"></i> </span> 
+						<span>Enviar otra transacción</span>
+					</button></p>
+				</div>
+		</div>
+	</div>
+</div>
+
