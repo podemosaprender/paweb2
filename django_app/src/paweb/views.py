@@ -57,7 +57,7 @@ def tienda(request):
 	})
 
 def historial(request):
-	return render(request, 'paweb/historial.html', {
+	return render(request, 'paweb/tienda.html', {
 	})
 
 
@@ -80,4 +80,14 @@ def transaccion(request):
 	return render(request, 'paweb/partes/transaccion/formulario.html', {
 		'base_template': base_template,
 		'form': form
+	})
+
+def historial(request):
+	transacciones = Transaccion.objects.all() #traer todas las transacciones
+	paginator = Paginator(transacciones, 6) # Muestra n avisos por página
+	page_number = request.GET.get('page')
+	pagina_transacciones = paginator.get_page(page_number)
+	return render(request, 'paweb/historial.html', {
+		'transacciones': pagina_transacciones, 
+		'paginas': range(1,5) #TODO: usar página actual y máximo de paginador
 	})

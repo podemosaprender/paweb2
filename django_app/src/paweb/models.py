@@ -80,6 +80,7 @@ class Transaccion(models.Model): #U: Transacciones
 	a_quien= models.CharField(_('a_quien'), max_length=40)
 	por= models.CharField(_('por'), max_length=200)
 	cuanto= models.IntegerField(_('cuanto'))
+	id= models.CharField(_('id'), max_length=5, primary_key=True)
 	
 
 	def __str__(self):

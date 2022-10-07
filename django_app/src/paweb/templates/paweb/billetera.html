@@ -140,13 +140,15 @@
 					</tr>
 				</thead>
 				<tbody>
+					{% for transaccion in transacciones %}
 					<tr>
 						<th>123</th>
-						<th>Abuela</th>
-						<th>Carlos</th>
-						<th>Arreglo de enchufe</th>
-						<th>12/10/2022 12:30hs</th>
+						<th> {{ transaccion.de_quien }}</th>
+						<th> {{ transaccion.a_quien }}</th>
+						<th> {{ transaccion.por }}Arreglo de enchufe</th>
+						<th> {{ transaccion.cuanto }}</th>
 					</tr>
+					{% endfor %}
 				</tbody>
 			</table>
 			<br>

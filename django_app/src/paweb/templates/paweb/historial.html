@@ -23,17 +23,21 @@
 						<th><abbr title="">De:</abbr></th>
 						<th><abbr title="">A:</abbr></th>
 						<th><abbr title="">Por:</abbr></th>
-						<th><abbr title="">Fecha y hora</abbr></th>
+						<th><abbr title="">Cuánto:</abbr></th>
+						<th><abbr title="">Fecha:</abbr></th>
 					</tr>
 				</thead>
 				<tbody>
+					{% for transaccion in transacciones %}
 					<tr>
-						<th>123</th>
-						<th>Abuela</th>
-						<th>Carlos</th>
-						<th>Arreglo de enchufe</th>
-						<th>12/10/2022 12:30hs</th>
+						<th> {{ transaccion.id }}</th>
+						<th> {{ transaccion.de_quien }}</th>
+						<th> {{ transaccion.a_quien }}</th>
+						<th> {{ transaccion.por }}</th>
+						<th> {{ transaccion.cuanto }}</th>
+						<th> {{ transaccion.fh_creado }}</th>
 					</tr>
+					{% endfor %}
 				</tbody>
 			</table>
 			<br>
