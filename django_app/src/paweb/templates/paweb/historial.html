@@ -4,22 +4,34 @@
 
 {% block NOhero %}
 
- {% include 'paweb/partes/navbar.html' %}
+{% include 'paweb/partes/navbar.html' %}
 {% endblock %}
 
 {% block content %}
 
-<div class="section is-medium has-background-light" id="actividad">
-	<div class="" id="actividad ">
-		<div class="content">
-			<div class="container">
+<div class="section has-background-light" id="actividad">
+	<div class="container">
+		<div class="nav mb-5">
+			<nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+				<ul>
+					<li><a href="/index">Inicio</a></li>
+					<li><a href="/billetera">Mi cuenta</a></li>
+					<li class="is-active"><a href="/historial">Historial</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="container">
+
 			<h1 class="title">Historial</h1>
 			<p class="subtitle">Tu actividad en PodemosAprender</p>
 			<h3>Transacciones</h3>
 			<table class="table has-background-info-light is-fullwidth" id="transacciones">
 				<thead>
 					<tr>
-						<th title="ID"><abbr title="">ID</abbr></th>	
+						<th title="ID"><abbr title="">ID</abbr></th>
 						<th><abbr title="">De:</abbr></th>
 						<th><abbr title="">A:</abbr></th>
 						<th><abbr title="">Por:</abbr></th>
@@ -78,10 +90,10 @@
 
 			</table>
 
-			</div>
-			
 		</div>
+
 	</div>
+
 
 
 </div>

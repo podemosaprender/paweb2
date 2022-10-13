@@ -36,7 +36,7 @@
 					</a>
 				</li>
 				<li>
-					<a>
+					<a href="/transaccion">
 						<span class="icon is-small"><i class="fa-sharp fa-solid fa-share"></i></span>
 						<span>Transferir</span>
 					</a>
@@ -122,84 +122,6 @@
 
 </div>
 
-<div class="section is-medium has-background-light" id="actividad">
-	<div class="" id="actividad ">
-		<div class="content">
-			<div class="container">
-			<h1 class="title">Historial</h1>
-			<p class="subtitle">Tu actividad en PodemosAprender</p>
-			<h3>Transacciones</h3>
-			<table class="table has-background-info-light is-fullwidth" id="transacciones">
-				<thead>
-					<tr>
-						<th title="ID"><abbr title="">ID</abbr></th>	
-						<th><abbr title="">De:</abbr></th>
-						<th><abbr title="">A:</abbr></th>
-						<th><abbr title="">Por:</abbr></th>
-						<th><abbr title="">Fecha y hora</abbr></th>
-					</tr>
-				</thead>
-				<tbody>
-					{% for transaccion in transacciones %}
-					<tr>
-						<th>123</th>
-						<th> {{ transaccion.de_quien }}</th>
-						<th> {{ transaccion.a_quien }}</th>
-						<th> {{ transaccion.por }}Arreglo de enchufe</th>
-						<th> {{ transaccion.cuanto }}</th>
-					</tr>
-					{% endfor %}
-				</tbody>
-			</table>
-			<br>
-			<h3>Productos o servicios</h3>
-			<table class="table has-background-info-light is-fullwidth">
-				<thead>
-					<tr>
-						<th>Qué:</th>
-						<th>Para: </th>
-						<th>Inicio:</th>
-						<th>Caché</th>
-						<th>Entrega:</th>
-						<th>Estado</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th>Arreglo de techo</th>
-						<th>Raul</th>
-						<th>10-03</th>
-						<th>60 unidades</th>
-						<th>20 días habiles</th>
-						<th>Finalizado</th>
-					</tr>
-					<tr>
-						<th>Clases de inglés</th>
-						<th>Yo</th>
-						<th>11-05</th>
-						<th>20 unidades</th>
-						<th>10 días habiles</th>
-						<th>Finalizado</th>
-					</tr>
-					<tr class="is-selected">
-						<th>Sopa de verduras</th>
-						<th>Yo</th>
-						<th>11-05</th>
-						<th>29 unidades</th>
-						<th>20 días habiles</th>
-						<th>Activo</th>
-					</tr>
-				</tbody>
-
-			</table>
-
-			</div>
-			
-		</div>
-	</div>
-
-
-</div>
 
 <div class="section is-medium" id="ofrecer">
 
